@@ -31,6 +31,10 @@ class ContactPlugin {
         add_action('init', array($this, 'custom_post_type'));
         // Đăng kí Rest API
         add_action('init', ['RestApiController', 'register']);
+
+        // Đăng kí short-code
+        add_shortcode("mySelfShortcode", array($this, "my_self_shortcode"));
+        add_shortcode("myEnclosingShortcode", array($this, "my_enclosing_shortcode"));
     }
 
     public function register() {
@@ -113,6 +117,27 @@ class ContactPlugin {
     public function react_embedded() {
         //
     }
+
+    public function my_self_shortcode() {
+        return '<h1>HELLO FROM SHORTCODE</h1>';
+    }
+
+    function my_enclosing_shortcode($atts, $content = null) {
+        // Xử lý thuộc tính (attributes) với mặc định
+        $atts = shortcode_atts([
+            'color' => 'blue',
+            'title' => 'Tiêu đề mặc định',
+        ], $atts, 'enclosing');
+    
+        $content = do_shortcode($content); // cho phép shortcode lồng nhau
+    
+        // Trả về HTML với thuộc tính tùy chỉnh
+        return '<div style="border: 2px solid ' . esc_attr($atts['color']) . '; padding: 10px;">' .
+               '<h3>' . esc_html($atts['title']) . '</h3>' .
+               '<div>' . wp_kses_post($content) . '</div>' .
+               '</div>';
+    }
+    
 }
 
 // Khai báo Instance

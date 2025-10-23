@@ -1,5 +1,3 @@
-<!-- LOGIC HANDLING -->
-
 <?php
 
 // Yêu cầu phải khai báo header-requirement để WP có thể xem đây là plugin để activate/deactivate 
@@ -22,16 +20,27 @@ if ( !defined('ABSPATH') ) {
 
 // Khởi tạo Plugin Controller class
 class ContactPlugin {
+
+    public function __construct()
+    {
+        add_action('init', array($this, 'custom_post_type'));
+    }
+
     public function activate() {
-        echo "The plugin has been activated";
+        // Tạo custom post type
+        $this->custom_post_type();
+        // reset rule
+        flush_rewrite_rules();        
     }
 
     public function deactivate() {
-
+        // reset rule
+        flush_rewrite_rules();
     }
 
-    public function unistall() {
-
+    // Đăng kí 1 post type (trong dashboard admin)
+    public function custom_post_type() {
+        register_post_type('contactForm', ['public' => true, 'label' => 'Contact']);
     }
 }
 
@@ -45,6 +54,3 @@ register_activation_hook(__FILE__, array($contactPlugin, "activate"));
 
 // Deactivate the plugin hook
 register_deactivation_hook(__FILE__, array($contactPlugin, "deactivate"));
-
-// Unistall the plugin hook
-register_uninstall_hook(__FILE__, array($contactPlugin, "uninstall"));

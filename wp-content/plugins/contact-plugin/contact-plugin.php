@@ -21,14 +21,23 @@ if ( !defined('ABSPATH') ) {
 // Khởi tạo Plugin Controller class
 class ContactPlugin {
 
+    private $plugin_name;
+
     public function __construct()
     {
+        $this->plugin_name = plugin_basename(__FILE__);
         add_action('init', array($this, 'custom_post_type'));
     }
 
     public function register() {
         // Load file static vào trang admin
         add_action('admin_enqueue_scripts', array( $this, "enqueue_static"));
+
+        // Đăng kí admin menu
+        add_action('admin_menu', array($this, "add_admin_page"));
+
+        // Đăng kí plugin link
+        add_filter("plugin_action_links_$this->plugin_name", array($this, "plugin_link_setting"));
     }
 
     public function activate() {
@@ -51,6 +60,29 @@ class ContactPlugin {
     public function enqueue_static() {
         wp_enqueue_style("contactPluginStyle", plugins_url('/static/css/my_css.css', __FILE__));
         wp_enqueue_script("contactPluginScript", plugins_url('/static/js/my_js.tsx', __FILE__));
+    }
+
+    public function add_admin_page() {
+        add_menu_page(
+            "Dylan Contact Plugin",
+            "Dylan Contact",
+            "manage_options", //Capability - tìm hiểu thêm
+            "dylanContactPlugin", // Menu Slug
+            array($this, "admin_setting"),
+            "dashicons-format-aside", // icon,
+            66  //Xếp sau plugin (pos: 65)
+        );
+    }
+
+    public function admin_setting() {
+        // lOAD TEMPLATE
+        require_once plugin_dir_path(__FILE__) . "templates/admin.php";
+    }
+
+    public function plugin_link_setting( $link ) {
+        $tmp_link = '<a href=admin.php?page=dylanContactPlugin>Controller</a>';
+        array_push($link, $tmp_link);
+        return $link;
     }
 }
 

@@ -63,14 +63,34 @@ class ContactPlugin {
     }
 
     public function add_admin_page() {
+        // Add menu cha
         add_menu_page(
             "Dylan Contact Plugin",
-            "Dylan Contact",
+            "Dylan List",
             "manage_options", //Capability - tìm hiểu thêm
             "dylanContactPlugin", // Menu Slug
             array($this, "admin_setting"),
             "dashicons-format-aside", // icon,
             66  //Xếp sau plugin (pos: 65)
+        );
+
+        // Add menu con
+        add_submenu_page(
+            "dylanContactPlugin",
+            "Contact List Submenu",
+            "Contact List",
+            "manage_options",
+            "dylanContactPlugin",  // Nếu không trùng với cha, thì submenu sẽ có menu cha làm submenu đầu tiên, thay vì con-con thì là cha-con-con
+            array($this, "admin_setting")
+        );
+
+        add_submenu_page(
+            "dylanContactPlugin",
+            "Contact Report Submenu",
+            "Contact Report",
+            "manage_options",
+            "contactReportSub",
+            array($this, "admin_setting")
         );
     }
 

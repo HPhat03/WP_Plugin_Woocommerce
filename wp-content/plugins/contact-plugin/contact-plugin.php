@@ -19,6 +19,7 @@ if ( !defined('ABSPATH') ) {
 }
 
 // Khởi tạo Plugin Controller class
+require_once plugin_dir_path(__FILE__) . "rest-api-controller.php";
 class ContactPlugin {
 
     private $plugin_name;
@@ -26,7 +27,10 @@ class ContactPlugin {
     public function __construct()
     {
         $this->plugin_name = plugin_basename(__FILE__);
+        // Đăng kí custom post type
         add_action('init', array($this, 'custom_post_type'));
+        // Đăng kí Rest API
+        add_action('init', ['RestApiController', 'register']);
     }
 
     public function register() {
@@ -90,7 +94,7 @@ class ContactPlugin {
             "Contact Report",
             "manage_options",
             "contactReportSub",
-            array($this, "admin_setting")
+            array($this, "react_embedded")
         );
     }
 
@@ -103,6 +107,11 @@ class ContactPlugin {
         $tmp_link = '<a href=admin.php?page=dylanContactPlugin>Controller</a>';
         array_push($link, $tmp_link);
         return $link;
+    }
+
+    // Embedded React
+    public function react_embedded() {
+        //
     }
 }
 

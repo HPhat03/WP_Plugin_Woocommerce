@@ -1,0 +1,20 @@
+{
+  "src/index.scss": {
+    "file": "index-8b6789b3.css",
+    "isEntry": true,
+    "src": "src/index.scss"
+  },
+  "src/main.css": {
+    "file": "main-332f11f8.css",
+    "src": "src/main.css"
+  },
+  "src/main.tsx": {
+    "css": [
+      "main-332f11f8.css",
+      "index-8b6789b3.css"
+    ],
+    "file": "main-d586606b.js",
+    "isEntry": true,
+    "src": "src/main.tsx"
+  }
+}

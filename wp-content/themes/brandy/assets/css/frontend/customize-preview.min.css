@@ -1,0 +1,158 @@
+@keyframes brandy-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+:root {
+  --brandy-edit-primary-color: #007cba;
+}
+
+.editable-part {
+  position: relative;
+  /* Change outline for widget edit */
+}
+.editable-part.brandy-widget-element:hover {
+  outline: 1px dashed var(--brandy-edit-primary-color);
+}
+
+/** Styling for row edit */
+.editable-row-part {
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  transition: outline-color var(--theme-component-transition-duration, 0.2s) ease-in-out;
+  user-select: none;
+}
+.editable-row-part > .edit-row-button-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  background: var(--brandy-edit-primary-color);
+  line-height: 1.3;
+  padding: 7px 8px;
+  font-size: 11px;
+  color: #fff;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--theme-component-transition-duration, 0.2s) ease-in-out;
+}
+.editable-row-part > .edit-row-button-wrapper:where(body.rtl .editable-row-part > .edit-row-button-wrapper) {
+  right: 0;
+  left: unset;
+}
+.editable-row-part:hover {
+  outline-color: var(--brandy-edit-primary-color);
+}
+.editable-row-part:hover > .edit-row-button-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
+/** Styling for element edit */
+.editable-element-part > .edit-button-wrapper {
+  position: absolute;
+  left: calc(100% - 5px);
+  top: 50%;
+  transform: translateY(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all var(--theme-component-transition-duration, 0.2s) ease-in-out;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 99;
+}
+.editable-element-part > .edit-button-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background: var(--brandy-edit-primary-color);
+  border-radius: 100% 100% 100% 2px;
+  transform: rotate(45deg);
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+    0 2px 4px -2px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow) !important;
+}
+.editable-element-part > .edit-button-wrapper::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 22px);
+  height: calc(100% + 22px);
+  top: -50%;
+  left: -10px;
+}
+.editable-element-part:hover > .edit-button-wrapper {
+  left: calc(100% + 10px);
+  visibility: visible;
+  opacity: 1;
+}
+.editable-element-part:where(body.rtl .editable-element-part) > .edit-button-wrapper {
+  left: unset;
+  right: calc(100% - 5px);
+}
+.editable-element-part:where(body.rtl .editable-element-part) > .edit-button-wrapper::before {
+  transform: rotate(225deg);
+}
+.editable-element-part:where(body.rtl .editable-element-part):hover > .edit-button-wrapper {
+  right: calc(100% + 10px);
+  left: unset;
+}
+
+.edit-button-wrapper svg {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 11px;
+  fill: #fff;
+}
+
+/** Hide wordpress default editor */
+.customize-partial-edit-shortcut {
+  display: none !important;
+}
+
+/** Add spinning animation when refresh part */
+.customize-partial-refreshing {
+  position: relative;
+  opacity: 1;
+}
+.customize-partial-refreshing > * {
+  opacity: 0.25;
+}
+
+.customize-partial-refreshing::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border-top: 3px solid #2271b1;
+  border-right: 3px solid transparent;
+  z-index: 100000;
+  animation: brandy-spinning 1s linear infinite;
+}
+
+html .customize-preview :where(.editable-part[style*=border-width]) {
+  border: unset;
+}

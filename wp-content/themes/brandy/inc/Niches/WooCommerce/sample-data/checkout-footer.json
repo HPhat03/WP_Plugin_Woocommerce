@@ -1,0 +1,18 @@
+{
+  "id": "woocommerce_checkout_footer",
+  "placements": {
+    "desktop": {
+      "top": [[], [], [], []],
+      "middle": [[], [], []],
+      "bottom": [["copyright"]]
+    },
+    "mobile": {
+      "top": [[], []],
+      "middle": [[], []],
+      "bottom": [["copyright"]]
+    }
+  },
+  "settings": {
+    "name": "WooCommerce Checkout Footer"
+  }
+}

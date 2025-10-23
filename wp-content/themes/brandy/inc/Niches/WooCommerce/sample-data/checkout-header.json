@@ -1,0 +1,29 @@
+{
+  "id": "woocommerce_checkout_header",
+  "placements": {
+    "desktop": {
+      "top": [[], [], []],
+      "middle": [["logo_1"], [], ["cart"]],
+      "bottom": [[], [], []],
+      "toggle": []
+    },
+    "mobile": {
+      "top": [[], [], []],
+      "middle": [["logo_1"], [], ["cart", "toggle_button"]],
+      "bottom": [[], [], []],
+      "toggle": [
+        "menu_1",
+        "divider_1",
+        "list_link_1",
+        "divider_3",
+        "account",
+        "wishlist",
+        "divider_2",
+        "language_switcher_1"
+      ]
+    }
+  },
+  "settings": {
+    "name": "WooCommerce Checkout Header"
+  }
+}

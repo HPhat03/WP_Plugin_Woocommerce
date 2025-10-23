@@ -1,0 +1,57 @@
+{
+  "src/builder.min.css": {
+    "file": "builder.min-5f39b341.css",
+    "isEntry": true,
+    "src": "src/builder.min.css"
+  },
+  "src/main.js": {
+    "css": [
+      "builder.min-5f39b341.css",
+      "main.min-1ae35c8f.css",
+      "wc.min-c1fb1d99.css",
+      "wc-cart.min-b23b4751.css",
+      "wc-checkout.min-e245ac76.css",
+      "wc-my-account.min-da404e67.css",
+      "wc-single.min-1416c34c.css",
+      "wc-order-completed.min-9151eee6.css"
+    ],
+    "file": "main-c2666285.js",
+    "isEntry": true,
+    "src": "src/main.js"
+  },
+  "src/main.min.css": {
+    "file": "main.min-1ae35c8f.css",
+    "isEntry": true,
+    "src": "src/main.min.css"
+  },
+  "src/wc-cart.min.css": {
+    "file": "wc-cart.min-b23b4751.css",
+    "isEntry": true,
+    "src": "src/wc-cart.min.css"
+  },
+  "src/wc-checkout.min.css": {
+    "file": "wc-checkout.min-e245ac76.css",
+    "isEntry": true,
+    "src": "src/wc-checkout.min.css"
+  },
+  "src/wc-my-account.min.css": {
+    "file": "wc-my-account.min-da404e67.css",
+    "isEntry": true,
+    "src": "src/wc-my-account.min.css"
+  },
+  "src/wc-order-completed.min.css": {
+    "file": "wc-order-completed.min-9151eee6.css",
+    "isEntry": true,
+    "src": "src/wc-order-completed.min.css"
+  },
+  "src/wc-single.min.css": {
+    "file": "wc-single.min-1416c34c.css",
+    "isEntry": true,
+    "src": "src/wc-single.min.css"
+  },
+  "src/wc.min.css": {
+    "file": "wc.min-c1fb1d99.css",
+    "isEntry": true,
+    "src": "src/wc.min.css"
+  }
+}

@@ -1,0 +1,99 @@
+.brandy-product-image-gallery {
+  --navigation-button-size: var(
+    --brandy-product-image-gallery--navigation-button-size,
+    40px
+  );
+  --navigation-button-icon-size: var(
+    --brandy-product-image-gallery--navigation-button-icon-size,
+    10
+  );
+  --navigation-button-color: var(
+    --brandy-product-image-gallery--navigation-button-color,
+    #ffffff
+  );
+  --navigation-button-icon-color: var(
+    --brandy-product-image-gallery--navigation-button-icon-color,
+    #5a6d80
+  );
+  --navigation-button-radius: var(
+    --brandy-product-image-gallery--navigation-button-radius,
+    100%
+  );
+
+  --navigation-button-shadow: var(
+    --brandy-product-image-gallery--navigation-button-shadow,
+    0px 10px 25px 0px #377e620d
+  );
+
+  --navigation-button-color-hover: var(
+    --brandy-product-image-gallery--navigation-button-color-hover,
+    #edf3f9
+  );
+  --navigation-button-icon-color-hover: var(
+    --brandy-product-image-gallery--navigation-button-icon-color-hover,
+    #21232a
+  );
+  --navigation-button-shadow-hover: var(
+    --brandy-product-image-gallery--navigation-button-shadow-hover,
+    0px 10px 25px 0px #12294026
+  );
+
+  --slide-image-height: var(
+    --brandy-product-image-gallery--slide-image-height,
+    auto
+  );
+}
+
+.brandy-product-image-gallery .woocommerce-product-gallery {
+  opacity: 1 !important;
+  position: relative;
+}
+
+.brandy-product-image-gallery .woocommerce-product-gallery__image {
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.brandy-product-image-gallery .woocommerce-product-gallery__image img {
+  height: var(--slide-image-height);
+}
+
+.brandy-product-image-gallery__navigation-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--navigation-button-size);
+  height: var(--navigation-button-size);
+  background-color: var(--navigation-button-color);
+  border-radius: var(--navigation-button-radius);
+  box-shadow: var(--navigation-button-shadow);
+  cursor: pointer;
+
+  transition: all ease-in-out var(--theme-component-transition-duration, .2s);
+}
+
+.brandy-product-image-gallery__navigation-button svg {
+  width: var(--navigation-button-icon-size);
+}
+
+.brandy-product-image-gallery__navigation-button svg path {
+  stroke: var(--navigation-button-icon-color);
+  transition: all ease-in-out var(--theme-component-transition-duration, .2s);
+}
+
+.brandy-product-image-gallery__navigation-button.navigation-button--disabled {
+  display: none;
+}
+
+.brandy-product-image-gallery__navigation-button:hover {
+  background-color: var(--navigation-button-color-hover);
+  box-shadow: var(--navigation-button-shadow-hover);
+}
+
+.brandy-product-image-gallery__navigation-button:hover svg path {
+  stroke: var(--navigation-button-icon-color-hover);
+}

@@ -1,0 +1,203 @@
+Oct 18, 2025 - Version 1.3.7
+- New: Add starter sites preview modal
+
+Oct 16, 2025 - Version 1.3.6
+- Fixed: Scrolling banner loop issue
+
+Oct 15, 2025 - Version 1.3.5
+- Fixed: Shortcode issues
+
+Oct 15, 2025 - Version 1.3.4
+- New: Allow select niche in Wizard
+- New: Theme generate Button colors
+- New: Theme color palette
+- New: Responsive text/content alignment
+- Updated: Import sample data speed
+
+Sep 9, 2025 - Version 1.3.3
+- Added: Newsletter email content settings
+- Updated: Layout for archive pages
+- Updated: Remove background from SKU tags
+- Fixed: List styles
+- Fixed: Menu layout broken when changing settings
+
+Sep 9, 2025 - Version 1.3.2
+- Fixed: Change XML to JSON
+
+Sep 8, 2025 - Version 1.3.1
+- Added: policy & terms pages on demo sites
+- Updated: Remove option to choose global about us/contact us page
+- Updated: layouts
+
+Aug 5, 2025 - Version 1.3
+- Updated: Integrate with WC 10.0.0
+- Updated: Product summary block
+
+Jun 14, 2025 - Version 1.2.9
+- Fixed: Checkout country dropdown layout with WC 9.9+
+- Fixed: Cart proceed to checkout loading issue
+- Fixed: Order received page title duplicated
+- Fixed: Select currency not working properly
+- Fixed: HTML not working in menu item
+- Updated: Sync currency list with YayCurrency
+- Updated: Currency Switcher & Language Switcher layout
+- Updated: Search layout
+- Updated: Language Switcher compatible with WPML, Polylang, Weglot
+
+Jun 11, 2025 - Version 1.2.8
+- New: 3 more Button elements for Header/Footer builder
+- New: Icon position for Button element
+- Updated: Builder layouts
+- Fixed: Customize button now correctly links to the Customizer page.
+- Fixed: Issue with searching elements in the Header/Footer.
+- Fixed: Currency issue when using YayCurrency Pro
+- Fixed: Cart drawer quantity not working correctly
+- Fixed: Newsletter, Search element layout settings
+- Fixed: Incorrect dashboard return links
+- Fixed: other issues
+
+May 27, 2025 - Version 1.2.7
+- New: reset header/footer, element to niche default
+- Updated: Reduce niche data sizes
+- Fixed: Product button width too large with WC 9.8+
+- Fixed: Product AJAX add to cart not working with WC 9.8+
+- Fixed: Reset Logo not hide element when site doesn't have logo config
+
+Apr 04, 2025 - Version 1.2.6
+- New: Added a setting for the Post Avatar block to display the name as a tooltip.
+- New: Fluid font sizes
+- New: Filter to alter product collection columns on mobile
+- Updated: Improved performance.
+- Updated: Enhanced builder element settings.
+- Updated: Restyle comments layout in single post.
+- Updated: Removed fluid settings from body font sizes and provided a clear definition in the editor distinguishing between normal and fluid settings.
+- Updated: Testimonials slider visibility
+- Updated: Slider patterns logic
+- Fixed: issue with Checkout inputs auto zoom when focusing ( Mobile )
+- Fixed: Testimonials shadow hidden issue
+- Removed: SwiperJs from core
+
+Feb 15, 2025 - Version 1.2.5
+- Improved: Performance
+
+Feb 06, 2025 - Version 1.2.4
+- New: An option to control the visibility of the Post Featured Image Block when empty (show/hide placeholder)
+- New: Introduce a badge style for the Paragraph block
+- New: Vertical and horizontal padding settings for the site
+- New: Automatically generate primary button colors when global styles are changed
+- New: Customizer option to display a sticky header when scrolling up
+- Updated: Front page now allows template swapping
+- Updated: Single post pages now display categories instead of tags in the post terms section
+- Updated: Set the default font weight for H1 and H2 to 800
+- Updated: Set the default font weight for H3 to 700
+- Updated: Default margin settings for H2 and H3 in single post content
+- Updated: Add underline styling for links in post content
+- Updated: Patterns
+- Fixed: Resolve fatal error in related products when using WooCommerce version 9.5+
+- Fixed: Correct display issues with the Coming Soon template
+- Removed: Breadcrumb pattern
+- Removed: Comments pattern
+
+Jan 14, 2025 - Version 1.2.3
+- Fixed: PHP Fatal Error warning
+
+Jan 12, 2025 - Version 1.2.2
+- Added: Apply background gradient to text settings
+- Added: Header sticky box shadow (now you can control header shadow when stickying)
+- Improved: Menu item active type - Set default color & padding
+- Improved: Change header menu default typo
+- Improved: Button style
+- Improved: Remove patterns with Woo install required
+- Updated: scrolling banner content for default site
+- Updated: default theme button hover color
+- Fixed: Button outline issue when viewing in Customizer
+- Fixed: Editor styles not reset after import new site
+- Fixed: Outline button on customizer issue
+- Fixed: Browse wishlist
+- Fixed: Paragraph + heading border, radius doesn't work
+- Fixed: Issue when loading customizer ( cannot complete loading )
+- Fixed: Mobile logo issue
+- Fixed: Header "More" menu items were reversed
+
+Dec 29, 2024 - Version 1.2.1
+- Fixed: The issue with saving header/footer settings when using child theme
+
+Dec 24, 2024 - Version 1.2.0
+- New: Underline settings for Site logo title when hovering  
+- New: Product Image ratio setting in Single Product Page  
+- New: Add content to Blog page  
+- New: Add offset settings to Toggle menu close button 
+- New: Clear the previous site data before importing the new one  
+- Improved: Menu items  
+- Improved: Update images  
+- Improved: Update site templates data import  
+- Improved: Brandy Menu position  
+- Improved: Change logo in default header presets  
+- Improved: Change Currency default style  
+- Improved: Change search view more button and placeholder when loading  
+- Improved: Remove some patterns from the default theme  
+- Improved: Change the process of Install & active Brandy Starter Templates plugin  
+- Improved: Newsletter improvements  
+- Fixed: Import site timeout issue  
+- Fixed: Customizer processing for a long time  
+- Fixed: Product zoom  
+- Fixed: Highlight content issue when dragging an element  
+- Fixed: Issue of importing site that prevents the progress from completion 
+
+Nov 13, 2024 - Version 1.1.8
+- Added: Support RTL
+
+Nov 1, 2024 - Version 1.1.7
+- Added: Option to hide logo from header
+- Added: Header column same size.
+- Added: Header Menu option to allow items collapsed like flex-wrap or combine to more options
+- Added: Header Menu item max characters
+- Updated: Logo title/tagline is inside the link
+- Updated: Logo conditional display
+- Fixed: Multisite links
+- Fixed: UI text and links
+
+Oct 18, 2024 - Version 1.1.6
+- Updated: Image sources
+- Updated: WC coming soon template
+- Added: Pattern Single featured product with gallery Images
+- Added: Pattern Product Image gallery
+- Added: Demo categories and tags when displaying products/ product categories in Home page
+- Added: WP presets variable in Spacing builder (allow user to choose theme spacing presets)
+- Added: Setting to Hide header border bottom when header is sticky
+- Added: shadow for Socials element in Builder
+- Added: Text gradient color for Menu element in Builder
+- Added: Arrows adjustment for Input control in Builder
+- Added: Footer column span
+- Fixed: Setting font weight for Button Block
+
+Sep 7, 2024- Version 1.1.5
+- Added: Header item spacing setting
+- Added: Header flex wrap setting
+- Added: Auto open cart drawer settings
+- Added: Scrolling banner pattern
+- Added: Some global css variables
+- Added: Footer split container settings
+- Added: Footer padding settings
+- Added: Socials Item direction setting
+- Updated: Checkout field label styling
+- Fixed: User cannot change admin language
+- Fixed: Import site warning error
+
+Aug 19, 2024 - Version 1.1.4
+- Fixed: Issue with resetting template
+
+Aug 4, 2024 - Version 1.1.3
+- Fixed: Add to cart for variable/grouped product in single product page
+
+Jul 30, 2024 - Version 1.1.2
+- Added: View demo site popup
+- Added: Footer row border radius settings
+- Fixed: Customizer page cannot load
+
+Jul 26, 2024- Version 1.1.1
+- Updated: Template content
+- Updated: Sample patterns
+
+Jul 25, 2024- Version 1.1
+- Initial release

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "WooCommerce styles",
+  "description": "WooCommerce site",
+  "settings": {
+    "layout": {
+      "wideSize": "1440px"
+    },
+    "color": {
+      "palette": [
+        {
+          "color": "#2F70B3",
+          "slug": "brandy-primary",
+          "name": "Brandy Primary"
+        },
+        {
+          "color": "#FF7979",
+          "slug": "brandy-secondary",
+          "name": "Brandy Secondary"
+        }
+      ]
+    },
+    "custom": {
+      "nav": {
+        "item": {
+          "background": "#fafbfc",
+          "hover-background": "#f4f7fa",
+          "active-background": "#edf3f9"
+        }
+      }
+    }
+  },
+  "styles": {
+    "elements": {
+      "button": {
+        ":hover": {
+          "color": {
+            "background": "#122940"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/post-terms": {
+        "elements": {
+          "link": {
+            "color": {
+              "text": "var:preset|color|brandy-primary",
+              "background": "#2f70b312"
+            },
+            ":hover": {
+              "color": {
+                "background": "#2f70b326"
+              }
+            }
+          }
+        }
+      },
+      "core/tag-cloud": {
+        "elements": {
+          "link": {
+            ":hover": {
+              "color": {
+                "background": "#ecf2f8"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

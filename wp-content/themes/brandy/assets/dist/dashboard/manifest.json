@@ -1,0 +1,20 @@
+{
+  "src/index.scss": {
+    "file": "index-426e6edb.css",
+    "isEntry": true,
+    "src": "src/index.scss"
+  },
+  "src/main.css": {
+    "file": "main-e57bbe05.css",
+    "src": "src/main.css"
+  },
+  "src/main.tsx": {
+    "css": [
+      "main-e57bbe05.css",
+      "index-426e6edb.css"
+    ],
+    "file": "main-fda18293.js",
+    "isEntry": true,
+    "src": "src/main.tsx"
+  }
+}

@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Property 1=twiter</title><path d="M17.18,4h2.76l-6,6.78L21,20H15.45L11.1,14.41,6.12,20H3.36l6.45-7.25L3,4H8.7l3.93,5.11Zm-1,14.38h1.53L7.86,5.54H6.22Z"/></svg>

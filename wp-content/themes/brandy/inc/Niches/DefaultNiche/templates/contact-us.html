@@ -1,0 +1,121 @@
+<!-- wp:group {"style":{"spacing":{"margin":{"top":"50px"}}},"layout":{"type":"constrained","contentSize":""}} -->
+<div class="wp-block-group" style="margin-top:50px">
+	<!-- wp:group {"align":"wide","className":"brandy-woocommerce-contact-container","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide brandy-woocommerce-contact-container">
+		<!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"bottom":"30px"}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontSize":"fluid-3-xl"} -->
+		<h2 class="wp-block-heading has-text-align-center has-fluid-3-xl-font-size"
+			style="margin-bottom:30px;font-style:normal;font-weight:700">We’re here to help you!</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:brandy/form {"action":"custom","metadata":{"categories":["brandy"],"patternName":"brandy/simple-contact-form","name":"Brandy simple contact form"},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-brandy-form">
+			<!-- wp:group {"responsiveLayout":{"enabled":true,"tablet":{"columnType":"manual","value":"1"},"mobile":{"columnType":"manual","value":"1"}},"style":{"spacing":{"blockGap":"30px"}},"layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
+			<div class="wp-block-group">
+				<!-- wp:brandy/form-input {"name":"full_name","isRequired":false,"label":"Full name:","id":"full_name","autocomplete":false} -->
+				<div class="wp-block-brandy-form-input"><label class="wp-block-brandy-form-label" for="full_name">Full
+						name: </label><input class="wp-block-brandy-form-field" id="full_name" name="full_name"
+						autocomplete="off" type="text" /></div>
+				<!-- /wp:brandy/form-input -->
+
+				<!-- wp:brandy/form-email {"name":"email_address","label":"Email Address:","id":"email_address","autocomplete":false} -->
+				<div class="wp-block-brandy-form-email"><label class="wp-block-brandy-form-label"
+						for="email_address">Email Address:</label><input class="wp-block-brandy-form-field" type="text"
+						id="email_address" name="email_address" autocomplete="off"
+						pattern="/^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/" /></div>
+				<!-- /wp:brandy/form-email -->
+
+				<!-- wp:brandy/form-phone {"name":"phone_number","label":"Phone Number:","id":"phone_number","autocomplete":false} -->
+				<div class="wp-block-brandy-form-phone"><label class="wp-block-brandy-form-label"
+						for="phone_number">Phone Number:</label><input class="wp-block-brandy-form-field" type="tel"
+						id="phone_number" name="phone_number" autocomplete="off" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+				</div>
+				<!-- /wp:brandy/form-phone -->
+
+				<!-- wp:brandy/form-input {"name":"subject","isRequired":false,"label":"Subject:","id":"subject","autocomplete":false} -->
+				<div class="wp-block-brandy-form-input"><label class="wp-block-brandy-form-label" for="subject">Subject:
+					</label><input class="wp-block-brandy-form-field" id="subject" name="subject" autocomplete="off"
+						type="text" /></div>
+				<!-- /wp:brandy/form-input -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:brandy/form-input {"name":"message","isRequired":false,"label":"Message:","id":"message","autocomplete":false,"type":"textarea"} -->
+			<div class="wp-block-brandy-form-input"><label class="wp-block-brandy-form-label" for="message">Message:
+				</label><textarea class="wp-block-brandy-form-field" id="message" name="message" autocomplete="off"
+					rows="5"></textarea></div>
+			<!-- /wp:brandy/form-input -->
+
+			<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+			<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)"><!-- wp:brandy/form-submit {"width":"150px","style":{"spacing":{"padding":{"top":"0.89rem","bottom":"0.89rem"}},"typography":{"fontSize":"18px"}}} -->
+			<button class="wp-element-button has-text-align-center" class="wp-block-brandy-form-submit wp-element-button has-text-align-center" style="padding-top:0.89rem;padding-bottom:0.89rem;font-size:18px;width:150px">Submit</button>
+			<!-- /wp:brandy/form-submit --></div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:brandy/form -->
+
+		<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"},"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group alignwide"
+			style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+			<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|30","left":"var:preset|spacing|30"}}}} -->
+			<div class="wp-block-columns alignwide">
+				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
+				<div class="wp-block-column">
+					<!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"large"} -->
+					<h4 class="wp-block-heading has-text-align-center has-large-font-size"
+						style="font-style:normal;font-weight:500;text-transform:uppercase">contact info</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"align":"center"} -->
+					<p class="has-text-align-center">Call us today: <a href="tel:6146389574">6-146-389-574</a><br>Send
+						us an email: info.help@remit.com</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:column -->
+
+				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
+				<div class="wp-block-column">
+					<!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"large"} -->
+					<h4 class="wp-block-heading has-text-align-center has-large-font-size"
+						style="font-style:normal;font-weight:500;text-transform:uppercase">remit store</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"align":"center"} -->
+					<p class="has-text-align-center">70 Washington Square South New York, NY 10012, United States</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:column -->
+
+				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
+				<div class="wp-block-column">
+					<!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"large"} -->
+					<h4 class="wp-block-heading has-text-align-center has-large-font-size"
+						style="font-style:normal;font-weight:500;text-transform:uppercase">work hours</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"align":"center"} -->
+					<p class="has-text-align-center">Monday – Thursday at 09:00 – 21:30<br>Friday - Sunday at 07:30 -
+						23:45</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:column -->
+
+				<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
+				<div class="wp-block-column">
+					<!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"500"}},"fontSize":"large"} -->
+					<h4 class="wp-block-heading has-text-align-center has-large-font-size"
+						style="font-style:normal;font-weight:500;text-transform:uppercase">follow socials</h4>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"align":"center"} -->
+					<p class="has-text-align-center">Connect with me on Facebook, Linkedin Youtube or Tiktok</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:column -->
+			</div>
+			<!-- /wp:columns -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+</div>
+<!-- /wp:group -->

@@ -26,6 +26,11 @@ class ContactPlugin {
         add_action('init', array($this, 'custom_post_type'));
     }
 
+    public function register() {
+        // Load file static vào trang admin
+        add_action('admin_enqueue_scripts', array( $this, "enqueue_static"));
+    }
+
     public function activate() {
         // Tạo custom post type
         $this->custom_post_type();
@@ -42,11 +47,17 @@ class ContactPlugin {
     public function custom_post_type() {
         register_post_type('contactForm', ['public' => true, 'label' => 'Contact']);
     }
+
+    public function enqueue_static() {
+        wp_enqueue_style("contactPluginStyle", plugins_url('/static/css/my_css.css', __FILE__));
+        wp_enqueue_script("contactPluginScript", plugins_url('/static/js/my_js.tsx', __FILE__));
+    }
 }
 
 // Khai báo Instance
 if (class_exists("ContactPlugin")){
     $contactPlugin = new ContactPlugin();
+    $contactPlugin->register();
 }
 
 // Activate the plugin hook

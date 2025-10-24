@@ -46,6 +46,9 @@ class ContactPlugin {
 
         // Đăng kí plugin link
         add_filter("plugin_action_links_$this->plugin_name", array($this, "plugin_link_setting"));
+
+        //WOO Commerce
+        add_filter( 'woocommerce_currency_symbol', array($this, 'dylan_change_currency_symbol'), 10, 2 );
     }
 
     public function activate() {
@@ -116,13 +119,14 @@ class ContactPlugin {
     // Embedded React
     public function react_embedded() {
         //
+        echo '<div id="root"></div>';
     }
 
     public function my_self_shortcode() {
         return '<h1>HELLO FROM SHORTCODE</h1>';
     }
 
-    function my_enclosing_shortcode($atts, $content = null) {
+    public function my_enclosing_shortcode($atts, $content = null) {
         // Xử lý thuộc tính (attributes) với mặc định
         $atts = shortcode_atts([
             'color' => 'blue',
@@ -138,6 +142,17 @@ class ContactPlugin {
                '</div>';
     }
     
+    public function dylan_change_currency_symbol( $currency_symbol, $currency ){
+        switch( $currency ) { 
+            case 'AUD' : 
+                $currency_symbol = 'AUD$'; 
+                break;
+            case 'VND' :
+                $currency_symbol = 'VN Dong $$'; 
+                break;
+        }
+        return $currency_symbol;
+    }
 }
 
 // Khai báo Instance

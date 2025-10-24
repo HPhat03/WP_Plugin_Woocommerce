@@ -35,6 +35,13 @@ class ContactPlugin {
         // Đăng kí short-code
         add_shortcode("mySelfShortcode", array($this, "my_self_shortcode"));
         add_shortcode("myEnclosingShortcode", array($this, "my_enclosing_shortcode"));
+
+        //WOO Commerce
+        // Thêm Thông báo vào trang add_to_cart
+        add_action( 'woocommerce_before_add_to_cart_form', array($this, 'dylan_woocommerce_custom_field'));
+
+        // Thêm tự động add coupon vào đơn hàng vào trang cart
+        add_filter( 'woocommerce_after_calculate_totals', array($this, 'dylan_woocommerce_auto_add_coupon'), 20, 1);
     }
 
     public function register() {
@@ -152,6 +159,45 @@ class ContactPlugin {
                 break;
         }
         return $currency_symbol;
+    }
+
+    public function dylan_woocommerce_custom_field() {
+        if (! is_user_logged_in())
+            return;
+
+        $user_id = get_current_user_id();
+        $order_count = wc_get_customer_order_count($user_id);
+        $rq = wc_price(50000);
+
+        if ($order_count >= 3) {
+            echo "<h4 style='font-weight: bold; font-style: italic; color:red'>Đơn hàng thành viên sẽ được giảm giá khi thanh toán ít nhất $rq </h4>";
+        }
+    }
+
+    public function dylan_woocommerce_auto_add_coupon( $cart ){
+        if ( ! is_user_logged_in()) return;
+        
+        // $cart = $cart->get_cart();
+
+        $user_id = get_current_user_id();
+        $order_count = wc_get_customer_order_count( $user_id );
+        $coupon_code = '08112003';
+        $threshold = 50000;
+
+        if ( $order_count <= 3 ) return;
+
+        $total = (int) $cart->get_subtotal();
+
+        if ( $total >= $threshold && ! $cart->has_discount( $coupon_code ) ) {
+            $cart->add_discount( $coupon_code );
+            wc_print_notice( 'Áp dụng thành công coupon thành viên!', 'success' );
+        }
+
+        if ( $total < $threshold ) {
+            $remaining = $threshold - $total;
+            wc_print_notice( 'Thanh toán thêm ' . wc_price( $remaining ) . ' để áp dụng coupon thành viên.', 'notice' );
+        }
+
     }
 }
 
